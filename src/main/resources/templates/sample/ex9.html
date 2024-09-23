@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	
+	<style>
+	.target {
+		background-color: yellow;
+	} 
+	
+	</style>		
+	
+	<ul>
+	
+		<th:block th:each="dto : ${list}">	  
+			<!-- th:text는 컨텐츠를 출력하는 속성 -->
+			<!-- th:class 속성에 삼항연산자를 추가하여,
+			no가 5의 배수라면 클래스 설정 -->
+			
+			<!-- 조건이 true이면 'target' 클래스 적용 -->
+			<li th:class="${dto.no%5==0} ? target:''" th:text="${dto}"></li>
+		</th:block>	  
+	
+	</ul>
+	
+	
+</body>
+</html>

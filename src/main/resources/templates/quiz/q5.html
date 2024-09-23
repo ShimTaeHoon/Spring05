@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- 하나씩 -->
+	[[${dto[0]}]]
+	<br>
+	
+	<th:block th:each="arr : ${dto}">
+		<span th:text="${arr}"></span>
+	</th:block>
+	
+	<br>
+	<th:block th:each="arr : ${dto}">
+		<span th:if="${arr%2 == 0}" th:text="${arr}"></span>
+	</th:block>
+	
+</body>
+</html>
