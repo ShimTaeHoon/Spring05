@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+
+<!-- setContent함수로 content라는 파라미터 받기 -->
+<th:block th:fragment="setContent(content)">
+
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -33,11 +37,8 @@
 	
 	<div class="content">
 		
-		<!-- $ : 변수 -->
-		<!-- ~{} : 조각 표현식 -->
-		<!-- fragment.html 파일의 조각 가져오기 --> <!-- 상대경로 templates/layout... -->
-		<th:block th:replace = "~{layout/fragment :: frag1}" >
-		</th:block>		
+		<!-- 파라미터로 전달받은 값 출력 -->
+		<th:block th:replace = "${content}"></th:block>
 		
 	</div>
 	
@@ -46,6 +47,9 @@
 	</div>
 	
 </body>
+
+<!-- ****************** -->
+</th:block>
 
 </html>
 

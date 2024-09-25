@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+
+<!-- exLayout3에서 contetn 변경하면 fragment2, 3가 한번에 변경되어 유지보수에 좋음 -->
+<th:block th:replace="~{/layout/exLayout3 :: setContent(~{this::content})}">
+
+<h1 th:fragment="content">조각2</h1>
+
+</th:block>
